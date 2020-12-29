@@ -8,17 +8,19 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  //fech data
   getData() {
-    const headerDict = {
+    /*const headerDict = {
       'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      'Accept': 'application/json'
     }
-    let url='https://datos.gob.es/apidata/catalog/distribution'
-
+    
     const requestOptions = {                                                                                                                                                                                 
       headers: new HttpHeaders(headerDict), 
-    };
+    };*/
+
+    let url='https://datos.gob.es/apidata/catalog/distribution'
+
     return this.http.get(url)
   }
   

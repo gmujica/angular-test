@@ -1,0 +1,22 @@
+<p-button (click)="showBasicDialog()" icon="pi pi-plus" label="Add"></p-button>
+<p-dialog header="Add new Item" [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
+    <form >
+        <div class="p-fluid">
+            <div class="p-field">
+                <label for="About">About</label>
+                <input id="About" type="text" pInputText> 
+            </div>
+            <div class="p-field">
+                <label for="AccessURL">AccessURL</label>
+                <input id="AccessURL" type="text" pInputText> 
+            </div>
+            <div class="p-field">
+                <label for="Title">Title</label>
+                <input id="Title" type="text" pInputText> 
+            </div>
+        </div>
+    </form>
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="setItem()"  label="Ok" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-dialog>
